@@ -69,7 +69,7 @@ class GameManager:
 
         self.waiting_for_player = cur_player.waiting_for_player
         if self.waiting_for_player:
-            if player_input is not None:
+            while player_input is not None:
                 if player_input < 0 or player_input >= len(cur_player.hand):
                     return
                 cur_card = cur_player.hand[player_input]
